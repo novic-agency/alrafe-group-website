@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL-RAFE GROUP</title>
+    <!-- Tailwind CSS CDN -->
+     
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Playfair Display font for logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Swiper.js for slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- Font Awesome CDN (add in your <head> if not already present) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.1/css/flag-icons.min.css" />
+    <style>
+        /* Custom underline animation */
+        .nav-link {
+            position: relative;
+            display: inline-block;
+        }
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            left: 0; bottom: -2px;
+            width: 0;
+            height: 2px;
+            background: #D4AF37;
+            transition: width 0.3s cubic-bezier(.4,0,.2,1);
+        }
+        .nav-link:hover::before, .nav-link:focus::before, .group:hover .nav-link::before {
+            width: 100%;
+        }
+        /* Animated word fade */
+        .fade-word {
+            transition: opacity 0.5s;
+        }
+        /* Custom scrollbar for dropdowns (optional) */
+        .dropdown-menu::-webkit-scrollbar {
+            width: 4px;
+            background: #f1f1f1;
+        }
+        .dropdown-menu::-webkit-scrollbar-thumb {
+            background: #e5e5e5;
+        }
+        /* Hide scrollbar for Firefox */
+        .dropdown-menu {
+            scrollbar-width: thin;
+            scrollbar-color: #e5e5e5 #f1f1f1;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+<!-- Loader .... -->
+
+    <div id="alrafe-loader" role="status" aria-label="Loading content..."
+     class="fixed inset-0 w-full h-screen bg-white flex flex-col justify-center items-center z-50 transition-opacity duration-700">
+  <span class="text-3xl md:text-5xl font-semibold mb-6 text-[#0F1B2A]" style="font-family: 'Playfair Display', serif;">
+    Alrafe Group
+  </span>
+  <div class="flex space-x-2">
+    <span class="w-2 h-2 rounded-full bg-[#D4AF37] animate-bounce" style="animation-delay:0ms"></span>
+    <span class="w-2 h-2 rounded-full bg-[#D4AF37] animate-bounce" style="animation-delay:200ms"></span>
+    <span class="w-2 h-2 rounded-full bg-[#D4AF37] animate-bounce" style="animation-delay:400ms"></span>
+  </div>
+</div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="w-full border-b border-gray-200">
+        <!-- ROW 1: Top Mini Row -->
+        <div class="hidden md:flex justify-end items-center py-1 px-6 md:px-12 text-sm bg-white gap-6">
+            <a href="#" class="nav-link text-gray-700 hover:text-[#1A2A4D] transition">Insights</a>
+            <a href="#" class="nav-link text-gray-700 hover:text-[#1A2A4D] transition">Help Center</a>
+            <!-- Language Dropdown -->
+            <div class="relative group">
+                <button id="langDropdownBtn" class="nav-link flex items-center gap-1 text-gray-700 hover:text-[#1A2A4D] focus:outline-none transition">
+                    EN <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div id="langDropdown" class="dropdown-menu absolute right-0 mt-2 w-28 bg-white border border-gray-200 rounded shadow-lg z-20 hidden">
+                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-50 text-gray-700" data-lang="en">English</button>
+                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-50 text-gray-700" data-lang="ar">العربية</button>
+                </div>
+            </div>
+            <!-- Search Bar -->
+            <div class="relative">
+    <input id="searchInput" type="text" placeholder="Search..." 
+        class="transition-all duration-300 w-8 focus:w-40 px-2 py-1 bg-gray-100 rounded border-none outline-none text-gray-700 placeholder:text-gray-400 opacity-0 focus:opacity-100"
+        autocomplete="off"
+    />
+    <svg class="absolute right-2 top-1.5 w-4 h-4 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8" stroke-width="2"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2"></line>
+    </svg>
+</div>
+        </div>
+    
+        <!-- ROW 1: Mobile Quick Links -->
+        <div class="flex md:hidden justify-between items-center py-1 px-4 bg-white">
+            <div class="relative">
+                <button id="quickLinksBtn" class="flex items-center gap-1 text-gray-700 text-sm font-medium focus:outline-none">
+                    Quick Links <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div id="quickLinksDropdown" class="dropdown-menu absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded shadow-lg z-20 hidden">
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-50 text-gray-700">Insights</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-50 text-gray-700">Help Center</a>
+                    <div class="border-t border-gray-100"></div>
+                    <div class="px-4 py-2">
+                        <span class="block text-xs text-gray-400 mb-1">Language</span>
+                        <button class="block w-full text-left py-1 hover:bg-gray-50 text-gray-700" data-lang="en">English</button>
+                        <button class="block w-full text-left py-1 hover:bg-gray-50 text-gray-700" data-lang="ar">العربية</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Search Bar -->
+            <div class="relative">
+    <input id="mobileSearchInput" type="text" placeholder="Search..." 
+        class="transition-all duration-300 w-8 focus:w-40 px-2 py-1 bg-gray-100 rounded border-none outline-none text-gray-700 placeholder:text-gray-400 opacity-0 focus:opacity-100"
+        autocomplete="off"
+    />
+    <svg class="absolute right-2 top-1.5 w-4 h-4 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8" stroke-width="2"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2"></line>
+    </svg>
+</div>
+        </div>
+        <!-- ROW 2: Main Navigation Bar -->
+        <div class="flex items-center justify-between bg-white border-b border-gray-200 px-6 md:px-12 py-3 relative">
+            <!-- Logo -->
+            <div class="flex items-center">
+    <span class="text-2xl font-bold" style="font-family: 'Playfair Display', serif;">
+        ALRAFE
+    </span>
+    <span class="ml-2 text-xl font-extrabold tracking-tight text-[#D4AF37] font-sans" style="letter-spacing:0.04em;">
+        .GROUP
+    </span>
+</div>
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex flex-1 justify-center gap-8">
+                <!-- Businesses Dropdown -->
+                <div class="relative group">
+                    <button class="nav-link flex items-center gap-1 text-gray-800 font-medium focus:outline-none">
+                        Businesses <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="dropdown-menu absolute left-0 mt-2 w-44 bg-white border border-gray-200 rounded shadow-lg z-20 hidden group-hover:block">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-50 text-gray-700">Business 1</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-50 text-gray-700">Business 2</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-50 text-gray-700">Business 3</a>
+                    </div>
+                </div>
+                <!-- Ecosystems Dropdown -->
+                <div class="relative group">
+                    <button class="nav-link flex items-center gap-1 text-gray-800 font-medium focus:outline-none">
+                        Ecosystems <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="dropdown-menu absolute left-0 mt-2 w-44 bg-white border border-gray-200 rounded shadow-lg z-20 hidden group-hover:block">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-50 text-gray-700">Gold</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-50 text-gray-700">Jewelry</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-50 text-gray-700">Clothes</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-50 text-gray-700">Tech</a>
+                    </div>
+                </div>
+                <!-- Destinations Dropdown -->
+                <div class="relative group">
+                    <button class="nav-link flex items-center gap-1 text-gray-800 font-medium focus:outline-none">
+                        Destinations <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="dropdown-menu absolute left-0 mt-2 w-44 bg-white border border-gray-200 rounded shadow-lg z-20 hidden group-hover:block">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-50 text-gray-700">Egypt</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-50 text-gray-700">Uganda</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-50 text-gray-700">UAE</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-50 text-gray-700">South Sudan</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-50 text-gray-700">Saudi Arabia</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact Us Button -->
+            <div class="hidden md:flex">
+                <a href="#" class="ml-8 px-5 py-2 rounded bg-[#1A2A4D] text-white font-semibold hover:bg-[#D4AF37] hover:text-[#1A2A4D] transition">Contact Us</a>
+            </div>
+            <!-- Hamburger for Mobile -->
+            <button id="mobileMenuBtn" class="md:hidden flex items-center justify-center w-10 h-10 rounded focus:outline-none">
+                <svg class="w-7 h-7 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden fixed inset-0 bg-white z-40 flex flex-col transition-transform duration-300 translate-x-full">
+            <div class="flex justify-between items-center px-6 py-4 border-b border-gray-200">
+    <span class="flex items-center">
+        <span class="text-2xl font-bold" style="font-family: 'Playfair Display', serif;">ALRAFE</span>
+        <span class="ml-2 text-xl font-extrabold tracking-tight text-[#D4AF37] font-sans" style="letter-spacing:0.04em;">.GROUP</span>
+    </span>
+    <button id="closeMobileMenu" class="w-8 h-8 flex items-center justify-center rounded focus:outline-none">
+        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+    </button>
+</div>
+            <nav class="flex-1 flex flex-col gap-2 px-6 py-4">
+                <!-- Dropdowns as collapsible -->
+                <div>
+                    <button class="w-full flex justify-between items-center py-2 text-lg font-medium text-gray-800 focus:outline-none" data-mobile-dropdown="businesses">
+                        Businesses
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="hidden flex-col pl-4 gap-1" data-mobile-dropdown-menu="businesses">
+                        <a href="#" class="py-1 text-gray-700">Business 1</a>
+                        <a href="#" class="py-1 text-gray-700">Business 2</a>
+                        <a href="#" class="py-1 text-gray-700">Business 3</a>
+                    </div>
+                </div>
+                <div>
+                    <button class="w-full flex justify-between items-center py-2 text-lg font-medium text-gray-800 focus:outline-none" data-mobile-dropdown="ecosystems">
+                        Ecosystems
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="hidden flex-col pl-4 gap-1" data-mobile-dropdown-menu="ecosystems">
+                        <a href="#" class="py-1 text-gray-700">Gold</a>
+                        <a href="#" class="py-1 text-gray-700">Jewelry</a>
+                        <a href="#" class="py-1 text-gray-700">Clothes</a>
+                        <a href="#" class="py-1 text-gray-700">Tech</a>
+                    </div>
+                </div>
+                <div>
+                    <button class="w-full flex justify-between items-center py-2 text-lg font-medium text-gray-800 focus:outline-none" data-mobile-dropdown="destinations">
+                        Destinations
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="hidden flex-col pl-4 gap-1" data-mobile-dropdown-menu="destinations">
+                        <a href="#" class="py-1 text-gray-700">Egypt</a>
+                        <a href="#" class="py-1 text-gray-700">Uganda</a>
+                        <a href="#" class="py-1 text-gray-700">UAE</a>
+                        <a href="#" class="py-1 text-gray-700">South Sudan</a>
+                        <a href="#" class="py-1 text-gray-700">Saudi Arabia</a>
+                    </div>
+                </div>
+                <a href="#" class="mt-4 px-5 py-2 rounded bg-[#1A2A4D] text-white font-semibold hover:bg-[#D4AF37] hover:text-[#1A2A4D] transition">Contact Us</a>
+            </nav>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative w-full">
+        <!-- Swiper Slider -->
+        <div class="swiper hero-swiper w-full h-[50vh] sm:h-[60vw] max-h-[520px] min-h-[220px]">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="assets/images/hero/Gemini_Generated_Image_6glg7y6glg7y6glg.png" alt="Hero 1" class="w-full h-full object-cover"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/hero/hero-bg.jpg" alt="Hero 2" class="w-full h-full object-cover"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/hero/hotel-hero.jpg" alt="Hero 3" class="w-full h-full object-cover"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/hero/main-hero.jpg" alt="Hero 4" class="w-full h-full object-cover"/>
+                </div>
+            </div>
+        </div>
+        <!-- Hero Text -->
+        <div class="absolute left-0 bottom-0 w-full pb-24 z-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start space-y-2">
+        <p class="text-white text-base sm:text-lg md:text-2xl font-medium drop-shadow mb-1">
+            Empowering Development
+        </p>
+        <h1 class="text-white text-2xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg leading-tight">
+            Through Integrity and
+            <span id="animatedWord" class="fade-word text-[#D4AF37] ml-2">Innovation</span>
+        </h1>
+    </div>
+</div>
+<!-- Overlay for better text contrast -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10 pointer-events-none"></div>
+    </section>
+
+<!-- OUR SERVICES SECTION -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Title -->
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4" style="font-family: 'Playfair Display', serif;">
+      Our Services
+    </h2>
+    <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12 text-base sm:text-lg font-sans">
+      Alrafe Group’s ventures span travel, gold trading, restaurants, and Islamic clothing, reflecting our commitment to quality, trust, and innovation across diverse industries.
+    </p>
+    <!-- Services Row: Flex, wrap on mobile -->
+    <div class="flex flex-wrap justify-center gap-8">
+      <!-- Travel Service Card -->
+      <a href="/services/travel" class="group w-full sm:w-[300px] block rounded-2xl bg-white p-6 hover:bg-sky-100 hover:text-sky-800 transition-all duration-300 shadow hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-sky-300" aria-label="Travel Service">
+        <div class="flex items-center justify-center w-14 h-14 rounded-full bg-sky-50 mb-4 mx-auto">
+          <i class="fas fa-plane-departure text-sky-500 text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center">Travel</h3>
+        <p class="text-gray-500 group-hover:text-sky-800 text-center text-sm">
+          Seamless travel solutions and memorable journeys across the globe.
+        </p>
+      </a>
+      <!-- Gold Trading Service Card -->
+      <a href="/services/gold-trading" class="group w-full sm:w-[300px] block rounded-2xl bg-white p-6 hover:bg-yellow-100 hover:text-yellow-800 transition-all duration-300 shadow hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-yellow-300" aria-label="Gold Trading Service">
+        <div class="flex items-center justify-center w-14 h-14 rounded-full bg-yellow-50 mb-4 mx-auto">
+          <i class="fas fa-coins text-yellow-500 text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center">Gold Trading</h3>
+        <p class="text-gray-500 group-hover:text-yellow-800 text-center text-sm">
+          Trusted gold trading with integrity and transparency at every step.
+        </p>
+      </a>
+      <!-- Restaurants Service Card -->
+      <a href="/services/restaurants" class="group w-full sm:w-[300px] block rounded-2xl bg-white p-6 hover:bg-rose-100 hover:text-rose-800 transition-all duration-300 shadow hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-rose-300" aria-label="Restaurants Service">
+        <div class="flex items-center justify-center w-14 h-14 rounded-full bg-rose-50 mb-4 mx-auto">
+          <i class="fas fa-utensils text-rose-500 text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center">Restaurants</h3>
+        <p class="text-gray-500 group-hover:text-rose-800 text-center text-sm">
+          Culinary experiences blending tradition, taste, and hospitality.
+        </p>
+      </a>
+      <!-- Islamic Clothing Service Card -->
+      <a href="/services/islamic-clothing" class="group w-full sm:w-[300px] block rounded-2xl bg-white p-6 hover:bg-gray-100 hover:text-gray-800 transition-all duration-300 shadow hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-gray-300" aria-label="Islamic Clothing Service">
+        <div class="flex items-center justify-center w-14 h-14 rounded-full bg-gray-50 mb-4 mx-auto">
+          <i class="fas fa-tshirt text-gray-500 text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center">Islamic Clothing</h3>
+        <p class="text-gray-500 group-hover:text-gray-800 text-center text-sm">
+          Elegant, authentic attire for every occasion and community.
+        </p>
+      </a>
+    </div>
+  </div>
+</section>
+    
+<!-- ABOUT US SECTION -->
+<section class="py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 bg-white overflow-hidden shadow-lg">
+      <!-- Left: Image -->
+      <div class="h-64 md:h-auto">
+        <img src="assets/images/about/WhatsApp Image 2025-05-09 at 16.10.39_f73e7560.jpg"
+             alt="About Alrafe Group"
+             class="w-full h-full object-cover object-center" />
+      </div>
+      <!-- Right: Text Content -->
+      <div class="bg-[#0F1B2A] flex flex-col justify-center p-8 md:p-12">
+        <span class="text-sm font-semibold uppercase text-gray-300 tracking-wider mb-2">Who We Are</span>
+        <h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white mb-4">
+          Our Mission, Values and Motto
+        </h3>
+        <p class="text-gray-300 font-sans mb-6 text-base sm:text-lg leading-relaxed">
+          Alrafe Group empowers communities through diverse ventures, guided by integrity and innovation for a brighter future.
+        </p>
+        <div class="flex items-center gap-4">
+          <button class="rounded border-2 border-[#D4AF37] bg-[#D4AF37] text-[#0F1B2A] font-semibold px-5 py-1.5 text-base transition-all duration-300 hover:bg-transparent hover:text-[#D4AF37] focus:outline-none">
+            Learn More
+          </button>
+          <div class="flex gap-2">
+            <a href="#" aria-label="Facebook" class="group flex items-center justify-center w-10 h-10 rounded-full border-2 border-gray-500 transition-all duration-200 hover:bg-[#1877f3] hover:border-[#1877f3]">
+              <i class="fab fa-facebook-f text-gray-400 group-hover:text-white transition-all duration-200"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="group flex items-center justify-center w-10 h-10 rounded-full border-2 border-gray-500 transition-all duration-200 hover:bg-gradient-to-tr hover:from-pink-500 hover:to-yellow-400 hover:border-pink-500">
+              <i class="fab fa-instagram text-gray-400 group-hover:text-white transition-all duration-200"></i>
+            </a>
+            <a href="#" aria-label="TikTok" class="group flex items-center justify-center w-10 h-10 rounded-full border-2 border-gray-500 transition-all duration-200 hover:bg-black hover:border-black">
+              <i class="fab fa-tiktok text-gray-400 group-hover:text-[#D4AF37] transition-all duration-200"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR GLOBAL PRESENCE SECTION -->
+<section class="relative w-full">
+  <!-- Background Map Image (replace with a more subtle PNG/JPG if needed) -->
+  <div class="w-full bg-cover bg-center bg-no-repeat" style="background-image: url('assets/images/8311157_12356.jpg');">
+    <!-- Overlay for contrast -->
+    <div class="absolute inset-0 bg-black/50"></div>
+    <!-- Content -->
+    <div class="relative z-10 flex flex-col items-center justify-center px-6 md:px-12 py-20">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mb-4" style="font-family: 'Playfair Display', serif;">
+        Our Global Presence
+      </h2>
+      <p class="text-white text-center max-w-2xl mx-auto mb-8 text-base sm:text-lg opacity-90">
+        Alrafe Group operates across multiple countries, building trusted partnerships and connecting communities throughout the Middle East, Africa, and North America.
+      </p>
+      <div class="flex flex-nowrap justify-center gap-6 mt-2 overflow-x-auto">
+        <span class="fi fi-ae w-10 h-7 rounded shadow" title="UAE"><span class="sr-only">Flag of UAE</span></span>
+        <span class="fi fi-eg w-10 h-7 rounded shadow" title="Egypt"><span class="sr-only">Flag of Egypt</span></span>
+        <span class="fi fi-ss w-10 h-7 rounded shadow" title="South Sudan"><span class="sr-only">Flag of South Sudan</span></span>
+        <span class="fi fi-ug w-10 h-7 rounded shadow" title="Uganda"><span class="sr-only">Flag of Uganda</span></span>
+        <span class="fi fi-ca w-10 h-7 rounded shadow" title="Canada"><span class="sr-only">Flag of Canada</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR COLLABORATIONS SECTION -->
+<section class="w-full bg-[#0F1B2A] px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-y-6 gap-x-8 mt-0">
+  <!-- Left: Label -->
+  <div class="w-full sm:w-auto flex items-center justify-start">
+    <span class="text-lg sm:text-xl font-semibold text-gray-200">Our collaborations</span>
+  </div>
+  <!-- Middle: Vertical Separator -->
+  <div class="hidden sm:block h-12 w-[2px] bg-gray-500 mx-4"></div>
+  <!-- Right: Logos -->
+  <div class="flex-1 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+    <a href="https://www.pesapal.com" target="_blank" rel="noopener" class="transition-transform duration-200 hover:scale-105 hover:opacity-90">
+      <img src="https://www.pesapal.com/assets/images/logo.png"
+           alt="Pesapal Logo"
+           class="max-h-10 max-w-[100px] object-contain" />
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT US SECTION -->
+<section class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 bg-white rounded-2xl shadow-lg overflow-hidden">
+      <!-- Left: Contact Form -->
+      <form class="p-8 md:p-10 flex flex-col justify-center space-y-4">
+        <h2 class="text-2xl font-bold mb-2 text-[#1A2A4D]">Contact Us</h2>
+        <input type="text" placeholder="Full Name" class="w-full rounded-xl border-none bg-gray-100 px-4 py-3 focus:ring-2 focus:ring-[#D4AF37] transition" required>
+        <input type="email" placeholder="Email Address" class="w-full rounded-xl border-none bg-gray-100 px-4 py-3 focus:ring-2 focus:ring-[#D4AF37] transition" required>
+        <input type="text" placeholder="Subject" class="w-full rounded-xl border-none bg-gray-100 px-4 py-3 focus:ring-2 focus:ring-[#D4AF37] transition">
+        <textarea placeholder="Message" rows="5" class="w-full rounded-xl border-none bg-gray-100 px-4 py-3 focus:ring-2 focus:ring-[#D4AF37] transition resize-none"></textarea>
+        <button type="submit" class="mt-2 w-fit px-8 py-3 rounded-full bg-[#D4AF37] text-white font-semibold shadow-md hover:bg-[#bfa13a] transition-all duration-200">
+          Send Message
+        </button>
+      </form>
+      <!-- Right: Info Block -->
+      <div class="p-8 md:p-10 flex flex-col justify-center bg-[#0F1B2A] text-gray-100 space-y-6">
+        <div>
+          <h3 class="text-xl font-bold mb-2 text-[#D4AF37]">Alrafe Group HQ</h3>
+          <p>Dubai, UAE</p>
+        </div>
+        <div>
+          <span class="block font-semibold text-gray-300">Email:</span>
+          <a href="mailto:info@alrafe.com" class="text-[#D4AF37] hover:underline">info@alrafe.com</a>
+        </div>
+        <div>
+          <span class="block font-semibold text-gray-300">Phone:</span>
+          <a href="tel:+971123456789" class="text-[#D4AF37] hover:underline">+971 123 456 789</a>
+        </div>
+        <!-- Optional: Map -->
+        <div class="rounded-xl overflow-hidden shadow mt-2">
+          <iframe
+            src="https://www.google.com/maps?q=Dubai,UAE&output=embed"
+            width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Alrafe Group HQ Location"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UPCOMING EVENTS SECTION -->
+<section class="w-full bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-4 md:px-12">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-2" style="font-family: 'Playfair Display', serif;">
+        Upcoming Events
+      </h2>
+      <p class="text-gray-600 max-w-xl mx-auto text-base md:text-lg">
+        Stay updated with Alrafe Group’s latest events, expos, and networking opportunities across our global network.
+      </p>
+    </div>
+    <!-- Events Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Box 1: Large Event (col-span-2) -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 col-span-1 md:col-span-2 flex flex-col">
+        <div class="overflow-hidden rounded-t-xl">
+          <img src="https://picsum.photos/800/400?random=1" alt="Dubai Trade Expo 2025"
+               class="w-full h-48 md:h-64 object-cover transform transition-transform duration-300 hover:scale-105" />
+        </div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-xl font-semibold mb-2">Dubai Trade Expo 2025</h3>
+          <p class="text-gray-600 mb-4">
+            Join industry leaders and innovators at the region’s premier trade event, featuring global exhibitors and insightful panels.
+          </p>
+          <a href="#" class="mt-auto text-[#1A2A4D] underline underline-offset-4 font-medium hover:text-[#D4AF37] transition">
+            Learn more &rarr;
+          </a>
+        </div>
+      </div>
+      <!-- Box 2: Tall Event (row-span-2) -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 row-span-1 md:row-span-2 flex flex-col">
+        <div class="overflow-hidden rounded-t-xl">
+          <img src="https://picsum.photos/400/600?random=2" alt="Cairo Business Forum"
+               class="w-full h-48 md:h-64 object-cover transform transition-transform duration-300 hover:scale-105" />
+        </div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-xl font-semibold mb-2">Cairo Business Forum</h3>
+          <p class="text-gray-600 mb-4">
+            A gathering of entrepreneurs and investors to explore new opportunities and foster business growth in Africa.
+          </p>
+          <a href="#" class="mt-auto text-[#1A2A4D] underline underline-offset-4 font-medium hover:text-[#D4AF37] transition">
+            Learn more &rarr;
+          </a>
+        </div>
+      </div>
+      <!-- Box 3: Regular Event -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col">
+        <div class="overflow-hidden rounded-t-xl">
+          <img src="https://picsum.photos/400/300?random=3" alt="Uganda Innovation Summit"
+               class="w-full h-48 md:h-64 object-cover transform transition-transform duration-300 hover:scale-105" />
+        </div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-xl font-semibold mb-2">Uganda Innovation Summit</h3>
+          <p class="text-gray-600 mb-4">
+            Discover the latest in tech and entrepreneurship with workshops, demos, and networking sessions.
+          </p>
+          <a href="#" class="mt-auto text-[#1A2A4D] underline underline-offset-4 font-medium hover:text-[#D4AF37] transition">
+            Learn more &rarr;
+          </a>
+        </div>
+      </div>
+      <!-- Box 4: Regular Event -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col">
+        <div class="overflow-hidden rounded-t-xl">
+          <img src="https://picsum.photos/400/300?random=4" alt="Canada-Africa Trade Week"
+               class="w-full h-48 md:h-64 object-cover transform transition-transform duration-300 hover:scale-105" />
+        </div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-xl font-semibold mb-2">Canada-Africa Trade Week</h3>
+          <p class="text-gray-600 mb-4">
+            Connect with global partners and explore new markets at this international trade event.
+          </p>
+          <a href="#" class="mt-auto text-[#1A2A4D] underline underline-offset-4 font-medium hover:text-[#D4AF37] transition">
+            Learn more &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER SECTION -->
+<section class="w-full bg-[#0F1B2A] py-16">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2" style="font-family: 'Playfair Display', serif;">
+        Subscribe to Our Newsletter
+      </h2>
+      <p class="text-gray-300 max-w-xl mx-auto text-base sm:text-lg">
+        Get the latest news, insights, and updates from Alrafe Group delivered straight to your inbox.
+      </p>
+    </div>
+    <form class="flex flex-col sm:flex-row items-center gap-4 justify-center">
+      <input
+        type="email"
+        required
+        placeholder="Enter your email address"
+        class="w-full sm:w-auto flex-1 rounded-full px-5 py-3 bg-gray-900 text-white placeholder-gray-400 border-none focus:ring-2 focus:ring-[#D4AF37] transition"
+      />
+      <button
+        type="submit"
+        class="w-full sm:w-auto px-8 py-3 rounded-full bg-[#D4AF37] text-[#0F1B2A] font-semibold shadow-md hover:bg-[#bfa13a] transition-all duration-200"
+      >
+        Subscribe
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER SECTION -->
+<footer class="w-full bg-[#0F1B2A] text-gray-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-y-8">
+    <!-- Left: Headline & Description -->
+    <div class="flex-1 mb-6 md:mb-0">
+      <h3 class="text-2xl font-bold text-white mb-2" style="font-family: 'Playfair Display', serif;">
+        Alrafe Group
+      </h3>
+      <p class="max-w-xs text-gray-400 text-base">
+        Empowering development and building trusted partnerships across the globe.
+      </p>
+    </div>
+    <!-- Middle: Quick Links -->
+    <div class="flex-1 flex flex-col md:items-center gap-2">
+      <span class="uppercase text-sm font-semibold text-gray-400 mb-2">Quick Links</span>
+      <nav class="flex flex-col md:flex-row gap-2 md:gap-6 text-base">
+        <a href="#" class="hover:text-[#D4AF37] transition">Home</a>
+        <a href="#" class="hover:text-[#D4AF37] transition">About Us</a>
+        <a href="#" class="hover:text-[#D4AF37] transition">Services</a>
+        <a href="#" class="hover:text-[#D4AF37] transition">Contact</a>
+        <a href="#" class="hover:text-[#D4AF37] transition">Events</a>
+      </nav>
+    </div>
+  </div>
+  <div class="border-t border-gray-700 mt-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
+      <span>&copy; 2025 Alrafe Group. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+<!-- Floating Chat Icon (place just before </body>) -->
+<button
+  id="alrafe-chat-btn"
+  type="button"
+  class="fixed bottom-5 right-5 z-50 w-14 h-14 flex items-center justify-center rounded-full bg-[#D4AF37] shadow-lg hover:brightness-110 hover:shadow-2xl transition-all duration-300"
+  aria-label="Chat with Alrafe Group"
+>
+  <i class="fas fa-comment-dots text-2xl text-white"></i>
+</button>
+<script>
+  document.getElementById('alrafe-chat-btn').onclick = function() {
+    console.log("Chat coming soon");
+  };
+</script>
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+  window.addEventListener('load', function () {
+    const loader = document.getElementById('alrafe-loader');
+    if (loader) {
+      loader.style.opacity = '0';
+      setTimeout(() => loader.style.display = 'none', 700);
+    }
+  });
+</script>
+    <script>
+        // Swiper slider
+        const heroSwiper = new Swiper('.hero-swiper', {
+            loop: true,
+            effect: 'fade',
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            speed: 900,
+            fadeEffect: { crossFade: true },
+        });
+
+        // Animated word in hero
+        const words = [
+            "Innovation", "Opportunity", "Trust", "Excellence", "People",
+            "Commerce", "Vision", "Leadership", "Unity", "Growth"
+        ];
+        let wordIndex = 0;
+        const animatedWord = document.getElementById('animatedWord');
+        setInterval(() => {
+            animatedWord.style.opacity = 0;
+            setTimeout(() => {
+                wordIndex = (wordIndex + 1) % words.length;
+                animatedWord.textContent = words[wordIndex];
+                animatedWord.style.opacity = 1;
+            }, 500);
+        }, 2200);
+
+        // Language dropdown (desktop)
+        const langBtn = document.getElementById('langDropdownBtn');
+        const langDropdown = document.getElementById('langDropdown');
+        langBtn && langBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langDropdown.classList.toggle('hidden');
+        });
+        document.addEventListener('click', () => {
+            langDropdown && langDropdown.classList.add('hidden');
+        });
+        langDropdown && langDropdown.addEventListener('click', (e) => e.stopPropagation());
+
+        // Quick Links dropdown (mobile)
+        const quickLinksBtn = document.getElementById('quickLinksBtn');
+        const quickLinksDropdown = document.getElementById('quickLinksDropdown');
+        quickLinksBtn && quickLinksBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            quickLinksDropdown.classList.toggle('hidden');
+        });
+        document.addEventListener('click', () => {
+            quickLinksDropdown && quickLinksDropdown.classList.add('hidden');
+        });
+        quickLinksDropdown && quickLinksDropdown.addEventListener('click', (e) => e.stopPropagation());
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+        mobileMenuBtn && mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+        closeMobileMenu && closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+        // Mobile dropdowns
+        document.querySelectorAll('[data-mobile-dropdown]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const key = btn.getAttribute('data-mobile-dropdown');
+                const menu = document.querySelector(`[data-mobile-dropdown-menu="${key}"]`);
+                if (menu) menu.classList.toggle('hidden');
+            });
+        });
+
+        // Prevent dropdowns from closing when clicking inside
+        document.querySelectorAll('.dropdown-menu').forEach(menu => {
+            menu.addEventListener('click', e => e.stopPropagation());
+        });
+
+        // Search input expand/collapse
+        function setupSearchInput(id) {
+        const input = document.getElementById(id);
+        function updateOpacity() {
+            if (document.activeElement === input || input.value) {
+                input.classList.add('opacity-100');
+                input.classList.remove('opacity-0');
+            } else {
+                input.classList.remove('opacity-100');
+                input.classList.add('opacity-0');
+            }
+        }
+        if (input) {
+            input.addEventListener('focus', updateOpacity);
+            input.addEventListener('blur', updateOpacity);
+            input.addEventListener('input', updateOpacity);
+            updateOpacity();
+        }
+    }
+    setupSearchInput('searchInput');
+    setupSearchInput('mobileSearchInput');
+    </script>
+</body>
+</html>
