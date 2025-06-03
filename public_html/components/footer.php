@@ -1,6 +1,6 @@
 
 <!-- FOOTER SECTION -->
-<footer class="w-full bg-[#0F1B2A] text-gray-300">
+<footer class="w-full bg-[/businesses/comingsoon.php0F1B2A] text-gray-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-y-8">
     
     <div class="flex-1 mb-6 md:mb-0">
@@ -15,11 +15,11 @@
     <div class="flex-1 flex flex-col md:items-center gap-2">
       <span class="uppercase text-sm font-semibold text-gray-400 mb-2">Quick Links</span>
       <nav class="flex flex-col md:flex-row gap-2 md:gap-6 text-base">
-        <a href="#" class="hover:text-[#D4AF37] transition">Home</a>
-        <a href="#" class="hover:text-[#D4AF37] transition">About Us</a>
-        <a href="#" class="hover:text-[#D4AF37] transition">Services</a>
-        <a href="#" class="hover:text-[#D4AF37] transition">Contact</a>
-        <a href="#" class="hover:text-[#D4AF37] transition">Events</a>
+        <a href="/index.php" class="hover:text-[/businesses/comingsoon.phpD4AF37] transition">Home</a>
+        <a href="/businesses/comingsoon.php" class="hover:text-[/businesses/comingsoon.phpD4AF37] transition">About Us</a>
+        <a href="/businesses/comingsoon.php" class="hover:text-[/businesses/comingsoon.phpD4AF37] transition">Services</a>
+        <a href="/contact.php" class="hover:text-[/businesses/comingsoon.phpD4AF37] transition">Contact</a>
+        <a href="/businesses/comingsoon.php" class="hover:text-[/businesses/comingsoon.phpD4AF37] transition">Events</a>
       </nav>
     </div>
   </div>
@@ -33,7 +33,7 @@
 <button
   id="alrafe-chat-btn"
   type="button"
-  class="fixed bottom-5 right-5 z-50 w-14 h-14 flex items-center justify-center rounded-full bg-[#D4AF37] shadow-lg hover:brightness-110 hover:shadow-2xl transition-all duration-300"
+  class="fixed bottom-5 right-5 z-50 w-14 h-14 flex items-center justify-center rounded-full bg-[/businesses/comingsoon.phpD4AF37] shadow-lg hover:brightness-110 hover:shadow-2xl transition-all duration-300"
   aria-label="Chat with Alrafe Group"
 >
   <i class="fas fa-comment-dots text-2xl text-white"></i>

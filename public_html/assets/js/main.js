@@ -2,7 +2,7 @@
     const loader = document.getElementById('alrafe-loader');
     if (loader) {
       loader.style.opacity = '0';
-      setTimeout(() => loader.style.display = 'none', 700);
+      setTimeout(() => loader.style.display = 'none', 400);
     }
   });
   
@@ -102,3 +102,12 @@
     }
     setupSearchInput('searchInput');
     setupSearchInput('mobileSearchInput');
+
+      // Swiper for hero
+  new Swiper('.gold-hero-swiper', {
+    loop: true,
+    effect: 'fade',
+    autoplay: { delay: 3500, disableOnInteraction: false },
+    speed: 1200,
+    fadeEffect: { crossFade: true },
+  });

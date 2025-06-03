@@ -4,64 +4,6 @@
 <?php loadComponent('loader'); ?>
 <?php loadComponent('nav'); ?>
 
-
-        
-        <div id="mobileMenu" class="md:hidden fixed inset-0 bg-white z-40 flex flex-col transition-transform duration-300 translate-x-full">
-            <div class="flex justify-between items-center px-6 py-4 border-b border-gray-200">
-    <span class="flex items-center">
-        <span class="text-2xl font-bold" style="font-family: 'Playfair Display', serif;">ALRAFE</span>
-        <span class="ml-2 text-xl font-extrabold tracking-tight text-[#D4AF37] font-sans" style="letter-spacing:0.04em;">.GROUP</span>
-    </span>
-    <button id="closeMobileMenu" class="w-8 h-8 flex items-center justify-center rounded focus:outline-none">
-        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-        </svg>
-    </button>
-</div>
-            <nav class="flex-1 flex flex-col gap-2 px-6 py-4">
-                
-                <div>
-                    <button class="w-full flex justify-between items-center py-2 text-lg font-medium text-gray-800 focus:outline-none" data-mobile-dropdown="businesses">
-                        Businesses
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                    </button>
-                    <div class="hidden flex-col pl-4 gap-1" data-mobile-dropdown-menu="businesses">
-                        <a href="#" class="py-1 text-gray-700">Gold trading</a>
-                        <a href="#" class="py-1 text-gray-700">Travel Agency</a>
-                        <a href="#" class="py-1 text-gray-700">Restaurants</a>
-                        <a href="#" class="py-1 text-gray-700">Grocery stores</a>
-                    </div>
-                </div>
-                <div>
-                    <button class="w-full flex justify-between items-center py-2 text-lg font-medium text-gray-800 focus:outline-none" data-mobile-dropdown="ecosystems">
-                        Ecosystems
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                    </button>
-                    <div class="hidden flex-col pl-4 gap-1" data-mobile-dropdown-menu="ecosystems">
-                        <a href="#" class="py-1 text-gray-700">Gold</a>
-                        <a href="#" class="py-1 text-gray-700">Jewelry</a>
-                        <a href="#" class="py-1 text-gray-700">Clothes</a>
-                        <a href="#" class="py-1 text-gray-700">Tech</a>
-                    </div>
-                </div>
-                <div>
-                    <button class="w-full flex justify-between items-center py-2 text-lg font-medium text-gray-800 focus:outline-none" data-mobile-dropdown="destinations">
-                        Destinations
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                    </button>
-                    <div class="hidden flex-col pl-4 gap-1" data-mobile-dropdown-menu="destinations">
-                        <a href="#" class="py-1 text-gray-700">Egypt</a>
-                        <a href="#" class="py-1 text-gray-700">Uganda</a>
-                        <a href="#" class="py-1 text-gray-700">UAE</a>
-                        <a href="#" class="py-1 text-gray-700">South Sudan</a>
-                        <a href="#" class="py-1 text-gray-700">Saudi Arabia</a>
-                    </div>
-                </div>
-                <a href="#" class="mt-4 px-5 py-2 rounded bg-[#1A2A4D] text-white font-semibold hover:bg-[#D4AF37] hover:text-[#1A2A4D] transition">Contact Us</a>
-            </nav>
-        </div>
-    </nav>
-
     <!-- HERO SECTION -->
     <section class="relative w-full">
         
@@ -110,7 +52,7 @@
     
     <div class="flex flex-wrap justify-center gap-8">
       
-      <a href="/services/travel" class="group w-full sm:w-[300px] block rounded-2xl bg-white p-6 hover:bg-sky-100 hover:text-sky-800 transition-all duration-300 shadow hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-sky-300" aria-label="Travel Service">
+      <a href="#" class="group w-full sm:w-[300px] block rounded-2xl bg-white p-6 hover:bg-sky-100 hover:text-sky-800 transition-all duration-300 shadow hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-sky-300" aria-label="Travel Service">
         <div class="flex items-center justify-center w-14 h-14 rounded-full bg-sky-50 mb-4 mx-auto">
           <i class="fas fa-plane-departure text-sky-500 text-2xl"></i>
         </div>
@@ -120,7 +62,7 @@
         </p>
       </a>
       
-      <a href="/services/gold-trading" class="group w-full sm:w-[300px] block rounded-2xl bg-white p-6 hover:bg-yellow-100 hover:text-yellow-800 transition-all duration-300 shadow hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-yellow-300" aria-label="Gold Trading Service">
+      <a href="#" class="group w-full sm:w-[300px] block rounded-2xl bg-white p-6 hover:bg-yellow-100 hover:text-yellow-800 transition-all duration-300 shadow hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-yellow-300" aria-label="Gold Trading Service">
         <div class="flex items-center justify-center w-14 h-14 rounded-full bg-yellow-50 mb-4 mx-auto">
           <i class="fas fa-coins text-yellow-500 text-2xl"></i>
         </div>
@@ -130,23 +72,13 @@
         </p>
       </a>
       
-      <a href="/services/restaurants" class="group w-full sm:w-[300px] block rounded-2xl bg-white p-6 hover:bg-rose-100 hover:text-rose-800 transition-all duration-300 shadow hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-rose-300" aria-label="Restaurants Service">
+      <a href="#" class="group w-full sm:w-[300px] block rounded-2xl bg-white p-6 hover:bg-rose-100 hover:text-rose-800 transition-all duration-300 shadow hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-rose-300" aria-label="Restaurants Service">
         <div class="flex items-center justify-center w-14 h-14 rounded-full bg-rose-50 mb-4 mx-auto">
-          <i class="fas fa-utensils text-rose-500 text-2xl"></i>
+          <i class="fas fa-soon text-rose-500 text-2xl"></i>
         </div>
-        <h3 class="text-xl font-semibold mb-2 text-center">Restaurants</h3>
+        <h3 class="text-xl font-semibold mb-2 text-center">Coming soon</h3>
         <p class="text-gray-500 group-hover:text-rose-800 text-center text-sm">
-          Culinary experiences blending tradition, taste, and hospitality.
-        </p>
-      </a>
-      
-      <a href="/services/islamic-clothing" class="group w-full sm:w-[300px] block rounded-2xl bg-white p-6 hover:bg-gray-100 hover:text-gray-800 transition-all duration-300 shadow hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-gray-300" aria-label="Islamic Clothing Service">
-        <div class="flex items-center justify-center w-14 h-14 rounded-full bg-gray-50 mb-4 mx-auto">
-          <i class="fas fa-tshirt text-gray-500 text-2xl"></i>
-        </div>
-        <h3 class="text-xl font-semibold mb-2 text-center">Islamic Clothing</h3>
-        <p class="text-gray-500 group-hover:text-gray-800 text-center text-sm">
-          Elegant, authentic attire for every occasion and community.
+          Coming soon.....
         </p>
       </a>
     </div>
@@ -255,7 +187,7 @@
       <div class="p-8 md:p-10 flex flex-col justify-center bg-[#0F1B2A] text-gray-100 space-y-6">
         <div>
           <h3 class="text-xl font-bold mb-2 text-[#D4AF37]">Alrafe Group HQ</h3>
-          <p>Dubai, UAE</p>
+          <p>Kampala, Uganda - Arua Park Plaza Shop No. C3/541</p>
         </div>
         <div>
           <span class="block font-semibold text-gray-300">Email:</span>
@@ -263,12 +195,12 @@
         </div>
         <div>
           <span class="block font-semibold text-gray-300">Phone:</span>
-          <a href="tel:+971123456789" class="text-[#D4AF37] hover:underline">+971 123 456 789</a>
+          <a href="tel:+971123456789" class="text-[#D4AF37] hover:underline">+20 111 198 7883</a>
         </div>
         
         <div class="rounded-xl overflow-hidden shadow mt-2">
           <iframe
-            src="https://www.google.com/maps?q=Dubai,UAE&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d296.540485122514!2d32.574014387584675!3d0.31689683310365047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sug!4v1748986019477!5m2!1sen!2sug"
             width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             title="Alrafe Group HQ Location"></iframe>

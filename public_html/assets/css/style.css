@@ -1,6 +1,6 @@
 .nav-link {
             position: relative;
-            display: inline-block;
+            /* display: inline-block; */
         }
         .nav-link::before {
             content: '';
@@ -31,3 +31,13 @@
             scrollbar-width: thin;
             scrollbar-color: #e5e5e5 #f1f1f1;
         }
+
+            
+                /* Zoom effect for Swiper slides */
+        .swiper-zoom {
+  transform: scale(1);
+  transition: transform 2s cubic-bezier(.4,0,.2,1);
+}
+.swiper-slide-active .swiper-zoom {
+  transform: scale(1.08);
+}
