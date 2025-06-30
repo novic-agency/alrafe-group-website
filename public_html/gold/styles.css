@@ -1,0 +1,30 @@
+
+#mobile-menu {
+  pointer-events: none;
+  transition: all 0.3s;
+}
+#mobile-menu.show {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+  pointer-events: auto;
+  z-index: 50;
+}
+
+/* .product-content {
+  display: none;
+}
+.product-content.active {
+  display: block;
+} */
+
+.product-tab-btn.active {
+  border-bottom: 2px solid #FFD700; 
+  color: #B6862C;
+  background: #fff;
+}
+.product-tab-btn {
+  border-bottom: 2px solid transparent;
+  color: #374151; 
+  background: transparent;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}

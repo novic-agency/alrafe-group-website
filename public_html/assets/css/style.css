@@ -41,3 +41,8 @@
 .swiper-slide-active .swiper-zoom {
   transform: scale(1.08);
 }
+.group:hover .dropdown-menu,
+.group:focus-within .dropdown-menu {
+    display: block !important;
+}
+
