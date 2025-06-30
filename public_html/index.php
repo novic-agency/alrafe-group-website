@@ -130,11 +130,11 @@
           Alrafe Group empowers communities through diverse ventures, guided by integrity and innovation for a brighter future.
         </p>
         <div class="flex items-center gap-4">
-          <button class="rounded border-2 border-[#D4AF37] bg-[#D4AF37] text-[#0F1B2A] font-semibold px-5 py-1.5 text-base transition-all duration-300 hover:bg-transparent hover:text-[#D4AF37] focus:outline-none"
+          <a href="about/group.php"><button class="rounded border-2 border-[#D4AF37] bg-[#D4AF37] text-[#0F1B2A] font-semibold px-5 py-1.5 text-base transition-all duration-300 hover:bg-transparent hover:text-[#D4AF37] focus:outline-none"
                   data-en="Learn More"
                   data-ar="اعرف المزيد">
-            <a href="about/group.php">Learn More</a>
-          </button>
+            Learn More
+          </button></a>
           <div class="flex gap-2">
             <a href="#" aria-label="Facebook" class="group flex items-center justify-center w-10 h-10 rounded-full border-2 border-gray-500 transition-all duration-200 hover:bg-[#1877f3] hover:border-[#1877f3]">
               <i class="fab fa-facebook-f text-gray-400 group-hover:text-white transition-all duration-200"></i>
@@ -250,14 +250,14 @@
                 data-en="Email:"
                 data-ar="البريد الإلكتروني:">Email:</span>
           <a href="mailto:info@alrafe.com" class="text-[#D4AF37] hover:underline"
-             data-en="info@alrafe.com"
-             data-ar="info@alrafe.com">info@alrafe.com</a>
+             data-en="info@alrafegroup.com"
+             data-ar="info@alrafegroup.com">info@alrafegroup.com</a>
         </div>
         <div>
           <span class="block font-semibold text-gray-300"
                 data-en="Phone:"
                 data-ar="الهاتف:">Phone:</span>
-          <a href="tel:+971123456789" class="text-[#D4AF37] hover:underline"
+          <a href="+20 111 198 7883" class="text-[#D4AF37] hover:underline"
              data-en="+20 111 198 7883"
              data-ar="+20 111 198 7883">+20 111 198 7883</a>
         </div>

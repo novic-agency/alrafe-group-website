@@ -3,10 +3,10 @@
     <nav class="w-full border-b border-gray-200">
        
         <div class="hidden md:flex justify-end items-center py-1 px-6 md:px-12 text-sm bg-white gap-6">
-            <a href="#" class="nav-link text-gray-700 hover:text-[/businesses/comingsoon.php1A2A4D] transition"
+            <a href="/about/group.php" class="nav-link text-gray-700 hover:text-[/businesses/comingsoon.php1A2A4D] transition"
                data-en="Insights"
                data-ar="رؤى">Insights</a>
-            <a href="#" class="nav-link text-gray-700 hover:text-[/businesses/comingsoon.php1A2A4D] transition"
+            <a href="https://wa.link/9p7wia" class="nav-link text-gray-700 hover:text-[/businesses/comingsoon.php1A2A4D] transition"
                data-en="Help Center"
                data-ar="مركز المساعدة">Help Center</a>
            
@@ -50,10 +50,10 @@
                     Quick Links <i class="fas fa-chevron-down text-xs"></i>
                 </button>
                 <div id="quickLinksDropdown" class="dropdown-menu absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded shadow-lg z-20 hidden">
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-50 text-gray-700"
+                    <a href="/about/group.php" class="block px-4 py-2 hover:bg-gray-50 text-gray-700"
                        data-en="Insights"
                        data-ar="رؤى">Insights</a>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-50 text-gray-700"
+                    <a href="https://wa.link/9p7wia" class="block px-4 py-2 hover:bg-gray-50 text-gray-700"
                        data-en="Help Center"
                        data-ar="مركز المساعدة">Help Center</a>
                     <div class="border-t border-gray-100"></div>
@@ -111,10 +111,10 @@
                         Businesses <i class="fas fa-chevron-down text-xs"></i>
                     </button>
                     <div class="dropdown-menu absolute left-0 mt-2 w-44 bg-white border border-gray-200 rounded shadow-lg z-20 hidden group-hover:block group-focus-within:block">
-                        <a href="/alrafe_website/public_html/gold/index.php" class="block px-4 py-2 hover:bg-gray-50 text-gray-700"
+                        <a href="/gold/index.php" class="block px-4 py-2 hover:bg-gray-50 text-gray-700"
                            data-en="Gold Trading"
                            data-ar="تجارة الذهب">Gold Trading</a>
-                        <a href="/alrafe_website/public_html/businesses/travel.php" class="block px-4 py-2 hover:bg-gray-50 text-gray-700"
+                        <a href="/businesses/travel.php" class="block px-4 py-2 hover:bg-gray-50 text-gray-700"
                            data-en="Travel Agency"
                            data-ar="وكالة السفر">Travel Agency</a>
                         <a href="#" class="block px-4 py-2 hover:bg-gray-50 text-gray-700"
@@ -130,13 +130,13 @@
                         About Us <i class="fas fa-chevron-down text-xs"></i>
                     </button>
                     <div id="aboutDropdown" class="dropdown-menu absolute left-0 mt-2 w-44 bg-white border border-gray-200 rounded shadow-lg z-20 hidden">
-                        <a href="/alrafe_website/public_html/about/group.php" class="block px-4 py-2 hover:bg-gray-50 text-gray-700"
+                        <a href="/about/group.php" class="block px-4 py-2 hover:bg-gray-50 text-gray-700"
                            data-en="Alrafe group"
                            data-ar="مجموعة الرافع">Alrafe group</a>
-                        <a href="/alrafe_website/public_html/about/travel.php" class="block px-4 py-2 hover:bg-gray-50 text-gray-700"
+                        <a href="/businesses/travel.php" class="block px-4 py-2 hover:bg-gray-50 text-gray-700"
                            data-en="Alrafe Travel"
                            data-ar="رافع ترافل">Alrafe Travel</a>
-                        <a href="/alrafe_website/public_html/gold/index.php" class="block px-4 py-2 hover:bg-gray-50 text-gray-700"
+                        <a href="/gold/index.php" class="block px-4 py-2 hover:bg-gray-50 text-gray-700"
                            data-en="Alrafe Gold"
                            data-ar="رافع جولد">Alrafe Gold</a>
                         <a href="#" class="block px-4 py-2 hover:bg-gray-50 text-gray-700"
@@ -211,10 +211,10 @@
                         <i class="fas fa-chevron-down text-xs"></i>
                     </button>
                     <div class="hidden flex flex-col pl-4 gap-1" data-mobile-dropdown-menu="businesses">
-                        <a href="/alrafe_website/public_html/gold/index.php" class="py-1 text-gray-700"
+                        <a href="/gold/index.php" class="py-1 text-gray-700"
                            data-en="Gold trading"
                            data-ar="تجارة الذهب">Gold trading</a>
-                        <a href="/alrafe_website/public_html/businesses/travel.php" class="py-1 text-gray-700"
+                        <a href="/businesses/travel.php" class="py-1 text-gray-700"
                            data-en="Travel Agency"
                            data-ar="وكالة السفر">Travel Agency</a>
                         <a href="#" class="py-1 text-gray-700"
@@ -234,10 +234,10 @@
                         <a href="/" class="py-1 text-gray-700"
                            data-en="Alrafe Group"
                            data-ar="مجموعة الرافع">Alrafe Group</a>
-                        <a href="/alrafe_website/public_html/about/travel.php" class="py-1 text-gray-700"
+                        <a href="/about/travel.php" class="py-1 text-gray-700"
                            data-en="Alrafe Travel"
                            data-ar="رافع ترافل">Alrafe Travel</a>
-                        <a href="/alrafe_website/public_html/gold/index.php" class="py-1 text-gray-700"
+                        <a href="/gold/index.php" class="py-1 text-gray-700"
                            data-en="Alrafe Gold"
                            data-ar="رافع جولد">Alrafe Gold</a>
                         <a href="#" class="py-1 text-gray-700"

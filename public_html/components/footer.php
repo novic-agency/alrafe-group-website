@@ -21,21 +21,21 @@
             data-en="Quick Links"
             data-ar="روابط سريعة">Quick Links</span>
       <nav class="flex flex-col md:flex-row gap-2 md:gap-6 text-base">
-        <a href="/index.php" class="hover:text-[/businesses/comingsoon.phpD4AF37] transition"
+        <a href="/index.php" class="hover:text-[D4AF37] transition"
            data-en="Home"
            data-ar="الرئيسية">Home</a>
-        <a href="/businesses/comingsoon.php" class="hover:text-[/businesses/comingsoon.phpD4AF37] transition"
+        <a href="/about/group.php" class="hover:text-[D4AF37] transition"
            data-en="About Us"
            data-ar="من نحن">About Us</a>
-        <a href="/businesses/comingsoon.php" class="hover:text-[/businesses/comingsoon.phpD4AF37] transition"
+        <a href="/about/group.php" class="hover:text-[D4AF37] transition"
            data-en="Services"
            data-ar="الخدمات">Services</a>
-        <a href="/contact.php" class="hover:text-[/businesses/comingsoon.phpD4AF37] transition"
+        <a href="/contact.php" class="hover:text-[D4AF37] transition"
            data-en="Contact"
            data-ar="اتصل بنا">Contact</a>
-        <a href="/businesses/comingsoon.php" class="hover:text-[/businesses/comingsoon.phpD4AF37] transition"
-           data-en="Events"
-           data-ar="الفعاليات">Events</a>
+        <a href="/gold/index.php" class="hover:text-[D4AF37] transition"
+           data-en="Gold trading"
+           data-ar="تجارة الذهب">Gold trading</a>
       </nav>
     </div>
   </div>
@@ -49,26 +49,10 @@
   </div>
 </footer>
 
-<button
-  id="alrafe-chat-btn"
-  type="button"
-  class="fixed bottom-5 right-5 z-50 w-14 h-14 flex items-center justify-center rounded-full bg-[/businesses/comingsoon.phpD4AF37] shadow-lg hover:brightness-110 hover:shadow-2xl transition-all duration-300"
-  aria-label="Chat with Alrafe Group"
-  data-en="Chat with Alrafe Group"
-  data-ar="الدردشة مع مجموعة الرافع"
->
-  <i class="fas fa-comment-dots text-2xl text-white"></i>
-</button>
 
-<!-- SCRIPTS -->
-<script>
-  document.getElementById('alrafe-chat-btn').onclick = function() {
-    console.log("Chat coming soon");
-  };
-</script>
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/alrafe_website/public_html/assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
     
     
 </body>

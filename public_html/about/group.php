@@ -284,13 +284,13 @@
              data-ar="السفر - معرض دبي">Travel - Dubai Expo</div>
       </div>
       <div class="break-inside-avoid relative group">
-        <img src="../assets/images/about/gold-lab.jpg" alt="Gold Lab" class="rounded-xl shadow-lg w-full object-cover cursor-pointer transition-transform group-hover:scale-105" onclick="openLightbox(this)" />
+        <img src="../assets/images/about/gold-lab.JPG" alt="Gold Lab" class="rounded-xl shadow-lg w-full object-cover cursor-pointer transition-transform group-hover:scale-105" onclick="openLightbox(this)" />
         <div class="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition"
              data-en="Gold Lab - Uganda"
              data-ar="مختبر الذهب - أوغندا">Gold Lab - Uganda</div>
       </div>
       <div class="break-inside-avoid relative group">
-        <img src="../assets/images/about/team.jpg" alt="Team Event" class="rounded-xl shadow-lg w-full object-cover cursor-pointer transition-transform group-hover:scale-105" onclick="openLightbox(this)" />
+        <img src="../assets/images/about/team.JPG" alt="Team Event" class="rounded-xl shadow-lg w-full object-cover cursor-pointer transition-transform group-hover:scale-105" onclick="openLightbox(this)" />
         <div class="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition"
              data-en="Team - Annual Meetup"
              data-ar="الفريق - الاجتماع السنوي">Team - Annual Meetup</div>
@@ -302,7 +302,7 @@
              data-ar="المكتب - القاهرة">Office - Cairo</div>
       </div>
       <div class="break-inside-avoid relative group">
-        <img src="../assets/images/about/gold-conference.jpg" alt="Event" class="rounded-xl shadow-lg w-full object-cover cursor-pointer transition-transform group-hover:scale-105" onclick="openLightbox(this)" />
+        <img src="../assets/images/about/gold-conference.JPG" alt="Event" class="rounded-xl shadow-lg w-full object-cover cursor-pointer transition-transform group-hover:scale-105" onclick="openLightbox(this)" />
         <div class="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition"
              data-en="Event - Gold Conference"
              data-ar="فعالية - مؤتمر الذهب">Event - Gold Conference</div>

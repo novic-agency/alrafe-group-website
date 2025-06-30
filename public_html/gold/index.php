@@ -4,7 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alrafe Gold - Premium Gold Division | Excellence in Gold Trading & Manufacturing</title>
-    <meta name="description" content="Alrafe Gold - Premium gold division specializing in gold trading, manufacturing, testing, and certification. Your trusted partner in gold excellence.">
+    <meta name="description" content="Alrafe Gold is the premium division of Alrafe Group, specializing in gold trading, manufacturing, testing, and certification. Trusted partner for gold excellence in Africa and beyond.">
+    <meta name="keywords" content="Alrafe Gold, Gold Trading, Gold Manufacturing, Gold Testing, Gold Certification, Africa, Uganda, Egypt, UAE, Gold Lab, Gold Investment">
+    <meta name="author" content="Alrafe Gold">
+    <link rel="canonical" href="https://alrafegroup.com/gold/">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Alrafe Gold - Premium Gold Division">
+    <meta property="og:description" content="Specializing in gold trading, manufacturing, and certification. Discover gold excellence with Alrafe Gold.">
+    <meta property="og:image" content="https://alrafegroup.com/gold/assets/gold-hero.png">
+    <meta property="og:url" content="https://alrafegroup.com/gold/">
+    <meta property="og:type" content="website">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alrafe Gold - Premium Gold Division">
+    <meta name="twitter:description" content="Specializing in gold trading, manufacturing, and certification. Discover gold excellence with Alrafe Gold.">
+    <meta name="twitter:image" content="https://alrafegroup.com /gold/assets/gold-hero.png">
+    <!-- Favicon -->
+    <link rel="icon" href="/gold/assets/logo/alrafe-gold-logo.png" type="image/png">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,7 +35,21 @@
     
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
-    
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Alrafe Gold",
+  "url": "https://alrafegroup.com/gold/",
+  "logo": "https://alrafegroup.com/gold/assets/logo/alrafe-gold-logo.png",
+  "description": "Premium gold division specializing in gold trading, manufacturing, testing, and certification.",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Alrafe Group",
+    "url": "https://alrafegroup.com/"
+  }
+}
+</script>
     <script>
         tailwind.config = {
             theme: {
@@ -61,13 +91,13 @@
     </script>
 </head>
 <body class="bg-dark-700 text-white overflow-x-hidden">
-    <!-- Loading Screen -->
+    <!-- 
     <div id="loading-screen" class="fixed inset-0 bg-dark-900 z-50 flex items-center justify-center">
         <div class="text-center">
             <div class="animate-spin rounded-full h-16 w-16 border-t-2 border-gold-500 mx-auto mb-4"></div>
             <p class="text-gold-500 font-playfair text-xl">Loading Excellence...</p>
         </div>
-    </div>
+    </div> -->
 
     <!-- Navigation -->
     <nav id="navbar" class="fixed top-0 w-full z-40 transition-all duration-300 bg-dark-900/90 backdrop-blur-lg border-b border-gold-500/20">

@@ -66,7 +66,7 @@
 
       <!-- Image Column -->
       <div class="relative">
-        <img src="assets/lab-img/gold-lab.jpg" alt="Gold Laboratory Equipment" class="w-full h-96 object-cover rounded-2xl shadow-2xl">
+        <img src="assets/lab-img/gold-lab.JPG" alt="Gold Laboratory Equipment" class="w-full h-96 object-cover rounded-2xl shadow-2xl">
         <div class="absolute inset-0 bg-gradient-to-t from-dark-900/60 to-transparent rounded-2xl"></div>
       </div>
     </div>

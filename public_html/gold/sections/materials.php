@@ -76,7 +76,7 @@
   <div class="grid md:grid-cols-3 gap-8">
     <div class="product-card group">
       <div class="relative overflow-hidden rounded-xl mb-4">
-        <img src="assets/gold/luxury-necklace.jpg" alt="Luxury Necklace" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+        <img src="assets/gold/luxury-necklace.JPG" alt="Luxury Necklace" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
         <div class="absolute inset-0 bg-gradient-to-t from-white/60 to-transparent"></div>
         <div class="absolute top-4 right-4">
           <span class="bg-gold-500 text-white px-2 py-1 rounded-full text-xs font-semibold">18K Gold</span>

@@ -131,8 +131,8 @@ loadComponent('nav');
            data-en="Email"
            data-ar="البريد الإلكتروني">Email</div>
       <div class="text-gray-700 text-sm"
-           data-en="info@alrafe.com"
-           data-ar="info@alrafe.com">info@alrafe.com</div>
+           data-en="info@alrafegroup.com"
+           data-ar="info@alrafegroup.com">info@alrafe.com</div>
     </div>
     <div class="bg-[#fffbe6] rounded-xl shadow p-6 text-center">
       <div class="font-semibold text-[#D4AF37] mb-1"
