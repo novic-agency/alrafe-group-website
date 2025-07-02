@@ -5,7 +5,7 @@
       <h2 class="section-title text-3xl sm:text-4xl font-bold mb-4 text-gray-900" data-en="Connect With Excellence" data-ar="تواصل مع التميز">
         Connect With Excellence
       </h2>
-      <p class="section-subtitle max-w-2xl mx-auto text-gray-600" data-en="Ready to experience the Alrafe Gold difference? Let's start your journey to gold excellence." data-ar="مستعد لتجربة الفرق في الأعراف الذهب؟ دعنا نبدأ رحلتك إلى تميز الذهب.">
+      <p class="section-subtitle max-w-2xl mx-auto text-gray-600" data-en="Ready to experience the Alrafe Gold difference? Let's start your journey to gold excellence." data-ar="مستعد لتجربة الفرق في الرافع الذهب؟ دعنا نبدأ رحلتك إلى تميز الذهب.">
         Ready to experience the Alrafe Gold difference? Let's start your journey to gold excellence.
       </p>
     </div>

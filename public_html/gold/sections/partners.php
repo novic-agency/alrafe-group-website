@@ -108,7 +108,7 @@
                             <p class="text-sm text-gray-400">Global Procurement Director</p>
                         </div>
                     </div>
-                    <p class="text-gray-300 italic" data-en="Alrafe Gold's commitment to quality and transparency has made them our preferred partner for gold sourcing across multiple markets. Their certification standards are unmatched." data-ar="التزام الأعراف الذهب بالجودة والشفافية جعلهم شريكنا المفضل لتوريد الذهب عبر أسواق متعددة. معايير الشهادات لديهم لا مثيل لها.">
+                    <p class="text-gray-300 italic" data-en="Alrafe Gold's commitment to quality and transparency has made them our preferred partner for gold sourcing across multiple markets. Their certification standards are unmatched." data-ar="التزام الرافع الذهب بالجودة والشفافية جعلهم شريكنا المفضل لتوريد الذهب عبر أسواق متعددة. معايير الشهادات لديهم لا مثيل لها.">
                         "Alrafe Gold's commitment to quality and transparency has made them our preferred partner for gold sourcing across multiple markets. Their certification standards are unmatched."
                     </p>
                 </div>
@@ -123,7 +123,7 @@
                             <p class="text-sm text-gray-400">Investment Fund Manager</p>
                         </div>
                     </div>
-                    <p class="text-gray-300 italic" data-en="The precision and reliability of Alrafe Gold's testing services have been instrumental in our investment decisions. We trust their expertise completely." data-ar="دقة وموثوقية خدمات الاختبار في الأعراف الذهب كانت مفيدة في قرارات استثمارنا. نثق بخبرتهم تماماً.">
+                    <p class="text-gray-300 italic" data-en="The precision and reliability of Alrafe Gold's testing services have been instrumental in our investment decisions. We trust their expertise completely." data-ar="دقة وموثوقية خدمات الاختبار في الرافع الذهب كانت مفيدة في قرارات استثمارنا. نثق بخبرتهم تماماً.">
                         "The precision and reliability of Alrafe Gold's testing services have been instrumental in our investment decisions. We trust their expertise completely."
                     </p>
                 </div>

@@ -1,6 +1,6 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <h3 class="text-3xl font-playfair font-semibold mb-4" data-en="Stay Connected with Gold Excellence" data-ar="ابق على اتصال مع تميز الذهب">Stay Connected with Gold Excellence</h3>
-    <p class="text-gray-300 text-lg leading-relaxed" data-en="Subscribe to receive market insights, exclusive offers, and updates on our latest gold products and services. Join thousands of satisfied clients who trust Alrafe Gold for their precious metal needs." data-ar="اشترك لتلقي رؤى السوق والعروض الحصرية والتحديثات حول أحدث منتجاتنا وخدماتنا الذهبية. انضم إلى آلاف العملاء الراضين الذين يثقون في الأعراف الذهب لاحتياجاتهم من المعادن الثمينة.">
+    <p class="text-gray-300 text-lg leading-relaxed" data-en="Subscribe to receive market insights, exclusive offers, and updates on our latest gold products and services. Join thousands of satisfied clients who trust Alrafe Gold for their precious metal needs." data-ar="اشترك لتلقي رؤى السوق والعروض الحصرية والتحديثات حول أحدث منتجاتنا وخدماتنا الذهبية. انضم إلى آلاف العملاء الراضين الذين يثقون في الرافع الذهب لاحتياجاتهم من المعادن الثمينة.">
         Subscribe to receive market insights, exclusive offers, and updates on our latest gold products and services. Join thousands of satisfied clients who trust Alrafe Gold for their precious metal needs.
     </p>
     <form id="newsletter-form" class="space-y-4">

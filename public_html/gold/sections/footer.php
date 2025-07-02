@@ -4,7 +4,7 @@
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <h3 class="text-3xl font-playfair font-semibold mb-4" data-en="Stay Connected with Gold Excellence" data-ar="ابق على اتصال مع تميز الذهب">Stay Connected with Gold Excellence</h3>
-                    <p class="text-gray-300 text-lg leading-relaxed" data-en="Subscribe to receive market insights, exclusive offers, and updates on our latest gold products and services. Join thousands of satisfied clients who trust Alrafe Gold for their precious metal needs." data-ar="اشترك لتلقي رؤى السوق والعروض الحصرية والتحديثات حول أحدث منتجاتنا وخدماتنا الذهبية. انضم إلى آلاف العملاء الراضين الذين يثقون في الأعراف الذهب لاحتياجاتهم من المعادن الثمينة.">
+                    <p class="text-gray-300 text-lg leading-relaxed" data-en="Subscribe to receive market insights, exclusive offers, and updates on our latest gold products and services. Join thousands of satisfied clients who trust Alrafe Gold for their precious metal needs." data-ar="اشترك لتلقي رؤى السوق والعروض الحصرية والتحديثات حول أحدث منتجاتنا وخدماتنا الذهبية. انضم إلى آلاف العملاء الراضين الذين يثقون في الرافع الذهب لاحتياجاتهم من المعادن الثمينة.">
                         Subscribe to receive market insights, exclusive offers, and updates on our latest gold products and services. Join thousands of satisfied clients who trust Alrafe Gold for their precious metal needs.
                     </p>
                 </div>
@@ -77,7 +77,7 @@
                     <div>
                         <h3 class="text-lg font-semibold text-gold-500 mb-6" data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h3>
                         <ul class="space-y-3">
-                            <li><a href="#about" class="text-gray-300 hover:text-gold-500 transition-colors" data-en="About Alrafe Gold" data-ar="حول الأعراف الذهب">About Alrafe Gold</a></li>
+                            <li><a href="#about" class="text-gray-300 hover:text-gold-500 transition-colors" data-en="About Alrafe Gold" data-ar="حول الرافع الذهب">About Alrafe Gold</a></li>
                             <li><a href="#trading" class="text-gray-300 hover:text-gold-500 transition-colors" data-en="Live Gold Prices" data-ar="أسعار الذهب المباشرة">Live Gold Prices</a></li>
                             <li><a href="#materials" class="text-gray-300 hover:text-gold-500 transition-colors" data-en="Product Catalog" data-ar="كتالوج المنتجات">Product Catalog</a></li>
                             <li><a href="#partners" class="text-gray-300 hover:text-gold-500 transition-colors" data-en="Certifications" data-ar="الشهادات">Certifications</a></li>
@@ -142,7 +142,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                 <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                     <div class="text-gray-400 text-sm">
-                        <span data-en="© 2024 Alrafe Gold. All rights reserved. | A division of Alrafe Group" data-ar="© 2024 الأعراف الذهب. جميع الحقوق محفوظة. | قسم من مجموعة الأعراف">© 2024 Alrafe Gold. All rights reserved. | A division of Alrafe Group</span>
+                        <span data-en="© 2024 Alrafe Gold. All rights reserved. | A division of Alrafe Group" data-ar="© 2024 الرافع الذهب. جميع الحقوق محفوظة. | قسم من مجموعة الرافع">© 2024 Alrafe Gold. All rights reserved. | A division of Alrafe Group</span>
                     </div>
                     
                     <div class="flex space-x-6 text-sm">

@@ -2,14 +2,14 @@
 <section id="about" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 text-gray-900">
-            <h2 class="section-title text-3xl sm:text-4xl font-bold mb-4" data-en="About Alrafe Gold" data-ar="حول الأعراف الذهب">About Alrafe Gold</h2>
+            <h2 class="section-title text-3xl sm:text-4xl font-bold mb-4" data-en="About Alrafe Gold" data-ar="حول الرافع الذهب">About Alrafe Gold</h2>
             <p class="section-subtitle text-lg text-gray-600" data-en="Excellence forged through decades of expertise" data-ar="التميز المصقول عبر عقود من الخبرة">Excellence forged through decades of expertise</p>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-16 items-center">
             <div class="space-y-8">
                 <div class="prose max-w-none">
-                    <p class="text-lg leading-relaxed text-gray-700" data-en="Alrafe Gold stands as the premium division of the prestigious Alrafe Group, representing over three decades of unwavering commitment to excellence in the gold industry. Our legacy is built upon the foundation of trust, precision, and an uncompromising dedication to quality that has earned us recognition as industry leaders." data-ar="تقف الأعراف الذهب كقسم متميز من مجموعة الأعراف المرموقة، ممثلة أكثر من ثلاثة عقود من الالتزام الثابت بالتميز في صناعة الذهب. إرثنا مبني على أساس الثقة والدقة والتفاني غير المساوم بالجودة.">
+                    <p class="text-lg leading-relaxed text-gray-700" data-en="Alrafe Gold stands as the premium division of the prestigious Alrafe Group, representing over three decades of unwavering commitment to excellence in the gold industry. Our legacy is built upon the foundation of trust, precision, and an uncompromising dedication to quality that has earned us recognition as industry leaders." data-ar="تقف الرافع الذهب كقسم متميز من مجموعة الرافع المرموقة، ممثلة أكثر من ثلاثة عقود من الالتزام الثابت بالتميز في صناعة الذهب. إرثنا مبني على أساس الثقة والدقة والتفاني غير المساوم بالجودة.">
                         Alrafe Gold stands as the premium division of the prestigious Alrafe Group, representing over three decades of unwavering commitment to excellence in the gold industry. Our legacy is built upon the foundation of trust, precision, and an uncompromising dedication to quality that has earned us recognition as industry leaders.
                     </p>
                     
@@ -20,7 +20,7 @@
 
                 <!-- CEO Quote -->
                 <div class="bg-gradient-to-r from-gold-100/60 to-transparent border-l-4 border-gold-500 p-6 rounded-r-lg">
-                    <blockquote class="text-xl font-playfair italic text-gold-700" data-en="Our vision extends beyond mere transactions; we forge lasting partnerships built on integrity, expertise, and mutual success. At Alrafe Gold, every piece tells a story of excellence." data-ar="رؤيتنا تتجاوز المعاملات البسيطة؛ نحن نبني شراكات دائمة قائمة على النزاهة والخبرة والنجاح المتبادل. في الأعراف الذهب، كل قطعة تحكي قصة التميز.">
+                    <blockquote class="text-xl font-playfair italic text-gold-700" data-en="Our vision extends beyond mere transactions; we forge lasting partnerships built on integrity, expertise, and mutual success. At Alrafe Gold, every piece tells a story of excellence." data-ar="رؤيتنا تتجاوز المعاملات البسيطة؛ نحن نبني شراكات دائمة قائمة على النزاهة والخبرة والنجاح المتبادل. في الرافع الذهب، كل قطعة تحكي قصة التميز.">
                         "Our vision extends beyond mere transactions; we forge lasting partnerships built on integrity, expertise, and mutual success. At Alrafe Gold, every piece tells a story of excellence."
                     </blockquote>
                     <cite class="block mt-4 text-sm text-gray-500" data-en="— Abdallah Al-Alrafe, Chairman & CEO" data-ar="—  عبدالله الرافع، رئيس مجلس الإدارة والرئيس التنفيذي">— Abdallah Al-Alrafe, Chairman & CEO</cite>
